@@ -1,12 +1,18 @@
----
+```
 
-| _ \ \ / / | |/ /_ _|_ _|
-| _/\ V / | ' < | | | |  
- |_| |_| |_|\_\_\_\_| |_|
+░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓████████▓▒░
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░
+░▒▓███████▓▒░ ░▒▓██████▓▒░       ░▒▓███████▓▒░░▒▓█▓▒░  ░▒▓█▓▒░
+░▒▓█▓▒░         ░▒▓█▓▒░          ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░
+░▒▓█▓▒░         ░▒▓█▓▒░          ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░
+░▒▓█▓▒░         ░▒▓█▓▒░          ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░
+
+```
 
 ## Description
 
-Pykit is a FastAPI-based application designed to manage user data with a PostgreSQL database. It includes endpoints for creating, retrieving, updating, and deleting users. The application uses SQLAlchemy for ORM and Pydantic for data validation. The project follows a clean architecture template to ensure maintainability and scalability.
+Py-kit repo serves as a reference for initializing a Python server for backend development. It follows clean architecture to ensure maintainability and scalability.
 
 ## Features
 
