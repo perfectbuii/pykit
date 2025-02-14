@@ -1,0 +1,31 @@
+version: "3.8" # Specify the version of Docker Compose
+
+services:
+  server:
+    build: . # Build the Docker image from the Dockerfile in the current directory
+    ports:
+      - "8000:8000" # Map port 8000 on the host to port 8000 in the container
+    env_file:
+      - .env # Load environment variables from the .env file
+    depends_on:
+      - db # Ensure the db service is started before the server service
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER} # Set the POSTGRES_USER environment variable from the .env file
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # Set the POSTGRES_PASSWORD environment variable from the .env file
+      POSTGRES_DB: ${POSTGRES_DB} # Set the POSTGRES_DB environment variable from the .env file
+    restart: always # Always restart the container if it stops
+
+  db:
+    image: postgres:15 # Use the official PostgreSQL 15 image
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist PostgreSQL data in a Docker volume
+    ports:
+      - "5432:5432" # Map port 5432 on the host to port 5432 in the container
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER} # Set the POSTGRES_USER environment variable from the .env file
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # Set the POSTGRES_PASSWORD environment variable from the .env file
+      POSTGRES_DB: ${POSTGRES_DB} # Set the POSTGRES_DB environment variable from the .env file
+    restart: always # Always restart the container if it stops
+
+volumes:
+  postgres_data: # Define a named volume for persisting PostgreSQL data
